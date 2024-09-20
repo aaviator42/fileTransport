@@ -6,7 +6,7 @@
 
 
 // Configurable parameters
-$folderPath = 'my_docs/';	// Your folder path
+$folderPath = 'my_docs/';	// Your destination folder path
 $sourceFiles = 'https://example.com/sourceFiles.php';	// Source JSON url/file
 $newOutputJson = 'newFiles.json';			// files that exist on destination but not source
 $existingOutputJson = 'existingFiles.json'; // files that exist on both destination and source
