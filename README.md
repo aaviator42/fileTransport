@@ -21,6 +21,7 @@ Three PHP scripts that allow you to easily migrate files from one server to anot
 
 ## Requirements
 1. [Supported versions of PHP](https://www.php.net/supported-versions.php). At the time of writing, that's PHP `8.1+`. `fileTransport` will almost certainly work on older versions, but we don't test it on those, so be careful, do your own testing.
+2. PHP cURL extension (enable in `php.ini`)
 
 
 ------
