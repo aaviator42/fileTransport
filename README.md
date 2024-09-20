@@ -1,5 +1,7 @@
 # fileTransport
-Transfer files from one server to another
+Transfer files from one server to another  
+`v1.0`: `2024-09-21`  
+License: `AGPLv3`
 
 ## What is this?
 Three PHP scripts that allow you to migrate files from one server to another.
