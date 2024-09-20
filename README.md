@@ -5,7 +5,7 @@ Transfer files from one server to another.
 License: `AGPLv3`
 
 ## What is this?
-Three PHP scripts that allow you to migrate files from one server to another.
+Three PHP scripts that allow you to easily migrate files from one server to another.
 
 ## Usage
 1. Upload `sourceFiles.php` to your source server, and configure `$folderPath` at the top of the file to point to the folder you want to move.
