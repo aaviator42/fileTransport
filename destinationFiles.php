@@ -7,7 +7,7 @@
 
 // Configurable parameters
 $folderPath = 'my_docs/';	// Your folder path
-$originalJson = 'https://example.com/sourceFiles.php';	// Source JSON url/file
+$sourceFiles = 'https://example.com/sourceFiles.php';	// Source JSON url/file
 $newOutputJson = 'newFiles.json';			// files that exist on destination but not source
 $existingOutputJson = 'existingFiles.json'; // files that exist on both destination and source
 $missingOutputJson = 'missingFiles.json';	// files that exist on source but not destination
@@ -15,10 +15,10 @@ $missingOutputJson = 'missingFiles.json';	// files that exist on source but not 
 // ----
 header("Content-Type: text/plain");
 
-listFiles($folderPath, $originalJson, $newOutputJson, $existingOutputJson, $missingOutputJson);
+listFiles($folderPath, $sourceFiles, $newOutputJson, $existingOutputJson, $missingOutputJson);
 
-function listFiles($folderPath, $originalJson, $newOutputJson, $existingOutputJson, $missingOutputJson) {
-    $originalFiles = json_decode(file_get_contents($originalJson), true);
+function listFiles($folderPath, $sourceFiles, $newOutputJson, $existingOutputJson, $missingOutputJson) {
+    $originalFiles = json_decode(file_get_contents($sourceFiles), true);
 
     if (!is_array($originalFiles)) {
         $originalFiles = [];
