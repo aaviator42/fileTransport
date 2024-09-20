@@ -8,10 +8,13 @@
 $maxFilesToFetch = 1000; // Set how many files to fetch before stopping (set to 0 for unlimited)
 $skipIfExists = true;  // Toggle to skip downloading files if they already exist in the destination
 
-$missingFiles = json_decode(file_get_contents('missingFiles.json'), true);
+$missingFiles = json_decode(file_get_contents('missingFiles.json'), true); // Files to download
+
 $baseURL = 'https://example.com/my_docs/'; // Base URL to folder on source server
 $saveDir = 'my_docs/'; // Folder to save files to on destination server
-$logFile = 'fileFetcherLog.json';
+
+$simultaneousFiles = 5; // Number of files to download simultaneously
+$logFile = 'fileFetcherLog.json'; // Transfer log file
 
 // ----
 header("Content-Type: text/plain");
@@ -133,7 +136,7 @@ function logToFile($logFile, $logData) {
     file_put_contents($logFile, json_encode($logData, JSON_PRETTY_PRINT));
 }
 
-downloadFiles($missingFiles, $baseURL, $saveDir, 5, $maxFilesToFetch, $skipIfExists, $logData);
+downloadFiles($missingFiles, $baseURL, $saveDir, $simultaneousFiles, $maxFilesToFetch, $skipIfExists, $logData);
 
 $successCount = count($logData['success']);
 $failureCount = count($logData['failure']);
