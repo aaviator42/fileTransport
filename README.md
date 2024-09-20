@@ -1,5 +1,6 @@
 # fileTransport
-Transfer files from one server to another  
+Transfer files from one server to another.  
+
 `v1.0`: `2024-09-21`  
 License: `AGPLv3`
 
