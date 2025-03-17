@@ -10,11 +10,11 @@ header("Content-Type: text/plain");
 ini_set('max_execution_time', 0);
 
 // Configurable parameters
-$maxFilesToFetch = 50;  		// Set how many files to fetch before stopping (set to 0 for unlimited)
-$maxSimultaneousDownloads = 10; // Number of files to download simultaneously
-$skipIfExists = false;  		// Toggle to skip downloading files if they already exist in the destination
-$waitTimeBetweenDownloads = 50000; // Wait time between downloads in microseconds (default: 500000 = 500ms)
-$sslBypass = false; 			// Toggle SSL verification bypass (true to bypass, false to verify)
+$maxFilesToFetch = 50;  		    // Set how many files to fetch before stopping (set to 0 for unlimited)
+$maxSimultaneousDownloads = 10;     // Number of files to download simultaneously
+$skipIfExists = false;  		    // Toggle to skip downloading files if they already exist in the destination
+$waitTimeBetweenDownloads = 50000;  // Wait time between downloads in microseconds (default: 500000 = 500ms)
+$sslBypass = false; 			    // Toggle SSL verification bypass (true to bypass, false to verify)
 
 // Read the list of missing files from missingFiles.json
 $missingFiles = json_decode(file_get_contents('missingFiles.json'), true);
