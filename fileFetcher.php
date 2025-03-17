@@ -1,5 +1,5 @@
 <?php
-// 2024-09-20, v1.1
+// 2024-09-30, v1.1
 // github.com/aaviator42
 // fileTransport/fileFetcher.php
 // license: AGPLv3
